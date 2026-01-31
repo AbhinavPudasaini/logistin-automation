@@ -14,13 +14,13 @@ app = Flask(__name__)
 
 model = ChatGroq(
     model="moonshotai/kimi-k2-instruct-0905", 
-    api_key="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"
+    api_key="api"
 )
 
 # Lightweight model for classification
 classifier_model = ChatGroq(
     model="llama-3.1-8b-instant",
-    api_key="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"
+    api_key="api"
 )
 
 SYSTEM_PROMPT = """You are an intelligent invoice processing agent. Your job is to extract structured data from invoice/receipt content and push it to a Google Spreadsheet.
@@ -351,3 +351,4 @@ if __name__ == "__main__":
 #     """
     # run_agent()
     app.run(port=8080, debug=True)
+
